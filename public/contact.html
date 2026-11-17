@@ -46,6 +46,13 @@
           <label for="message">How can we help?</label>
           <textarea id="message" name="message" required></textarea>
 
+          <!-- Spam checks. People never see or fill in the website field; bots do. -->
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="form_token" value="{{FORM_TOKEN}}">
+
           <button class="btn" type="submit">Send message</button>
           <p class="form-status" id="form-status" role="status"></p>
         </form>
