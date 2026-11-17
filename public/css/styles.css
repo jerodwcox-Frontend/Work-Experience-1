@@ -1,5 +1,23 @@
 /* Calico Media marketing site */
 
+/* Fonts: Inter, self-hosted. Only the two weights the site uses. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/inter-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/inter-latin-700-normal.woff2') format('woff2');
+}
+
 :root {
   --ink: #1f1a17;
   --ink-soft: #5b524c;
@@ -62,6 +80,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -406,7 +425,7 @@ img {
 
 .playbook-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 28px;
 }
 
