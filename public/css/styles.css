@@ -677,6 +677,15 @@ img {
   resize: vertical;
 }
 
+/* Honeypot: moved off-screen so people never see it, but bots still fill it in. */
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-status {
   margin-top: 16px;
   font-weight: 700;
